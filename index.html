@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="./Style/Images/PNG/favicon.png" />
+    <meta name="description"
+        content="site web du studio ArchViz, nous somme un studio de visualisation architecturale 3D" />
+    <meta name="Keywords" content=" Visualisation architecturale, ArchViz, Architectur, Visualisation 3D, 3D sénégal, Architectur sénégal,
+        " />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArchViz-Décoration-Intérieur
+    </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./Style/Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5.x.x/dist/aframe-event-set-component.min.js"></script>
+    <!-- ########################################################################################### -->
+    <script src="https://unpkg.com/aframe-template-component@3.x.x/dist/aframe-template-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-layout-component@4.x.x/dist/aframe-layout-component.min.js"></script>
+</head>
+
+<body>
+
+    <div class="the_description">
+        À l'aide des logiciels de dernière génération et de notre savoir-faire dans le domaine de l’architecture
+        d’intérieur .
+        Nous vous aidons dans l’aménagement de vos espaces. Du design moderne au traditionnelle, minimaliste etc...
+    </div>
+
+    <a-scene id="the_scene" the_scene cursor="rayOrigin: mouse">
+        <a-assets>
+            <img id="Scene-1" src="./Style/Images/Image_1.jpg">
+            <img id="Scene-2" src="./Style/Images/Image_2.jpg">
+            <img id="Scene-3" src="./Style/Images/Image_3.jpg">
+            <img id="Scene-4" src="./Style/Images/Image_4.jpg">
+            <img id="Arrow-1" src="./Style/Images/PNG/Arrow-1.png">
+            <img id="Dote-1" src="./Style/Images/PNG/Dote_1.png">
+            <source id="the_sound" src="./Style/MediTation_From_West_Africa.mp3" type="audio/mpeg">
+        </a-assets>
+
+        <a-entity laser-controls="hand: left"
+            raycaster="objects: [data-clickable] ; far: 500; lineColor: #23343b; lineOpacity: 0.5"></a-entity>
+        <a-entity laser-controls="hand: right"
+            raycaster="objects: [data-clickable] ; far: 500; lineColor: #23343b; lineOpacity: 0.5"></a-entity>
+
+        <a-sky id="image-360" radius="500" rotation="0 0 0" src="#Scene-1"
+            animation__fade="property: components.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
+            animation__fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete__fade">
+        </a-sky>
+        <!-- ############################################################ -->
+        <!-- <a-sound position="0 0 0" sound="src: #the_sound; autoplay: true; loop: true" allow="autoplay"></a-sound> -->
+        <!-- ############################################################ -->
+        <!-- ############################################################ -->
+        <!-- ############################################################ -->
+        <!-- Group-1. -->
+        <a-entity scale="1 1 1" class="groups" id="Group-1" visible="true">
+            <a-plane data-clickable class="pintings clickable" position="-3 -1 -1" rotation="-67 100 -5"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-2  ; Group_to_activate: Group-2 ; The_rotation: 120">
+            </a-plane>
+        </a-entity>
+
+        <!-- Group-2 -->
+        <a-entity scale="0 0 0" class="groups" id="Group-2" visible="false">
+            <a-plane data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
+                position="-1.07675 -1.3176 3.81981"
+                rotation="-75.29352977373173 -178.01053849581007 -22.058302154741565"
+                the_dote="Name_of_dote: Dote-4 ; Group_to_activate: Group-4 ; The_rotation: 145">
+            </a-plane>
+            <a-plane data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
+                position="1.56328 -1.24896 1.93411" rotation="-80.78819502903634 -89.65414395089068 -22.18893653203139"
+                the_dote="Name_of_dote: Dote-1 ; Group_to_activate: Group-1 ; The_rotation: 0">
+            </a-plane>
+        </a-entity>
+
+        <!-- Group-3 -->
+        <a-entity scale="0 0 0" class="groups" id="Group-3" visible="false">
+            <a-plane data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
+                position="0.25319 -0.94886 2.84248" rotation="-84.75306297134163 -171.12186692495217 18.863489489092096"
+                the_dote="Name_of_dote: Dote-4 ; Group_to_activate: Group-4 ; The_rotation:  145">
+            </a-plane>
+        </a-entity>
+
+        <!-- Group-4 -->
+        <a-entity scale="0 0 0" class="groups" id="Group-4" visible="false">
+            <a-plane data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
+                position="0.01025 -1 -2.22633" rotation="-69.99997270451807 -6.5351566112621695 0"
+                the_dote="Name_of_dote: Dote-2 ; Group_to_activate: Group-2 ; The_rotation: 120">
+            </a-plane>
+            <a-plane data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
+                position="-2.90561 -0.73786 -1.08887" rotation="-69.99997270451807 22.094971453629935 0"
+                the_dote="Name_of_dote: Dote-3 ; Group_to_activate: Group-3 ; The_rotation: 120">
+            </a-plane>
+        </a-entity>
+
+        <!-- ############################################################ -->
+        <!-- ############################################################ -->
+        <!-- ############################################################ -->
+    </a-scene>
+    <script>
+        let groups = document.querySelectorAll('.groups')
+        let the_sky = document.querySelector('#image-360')
+        let the_cursor = document.querySelector('.a-mouse-cursor-hover')
+
+        AFRAME.registerComponent('the_dote', {
+            schema: { Name_of_dote: { type: 'string', default: '#Name', }, Group_to_activate: { type: 'string', default: '#Position', }, The_rotation: { type: 'string', default: '0', } },
+
+            init: function () {
+                var stringToLog = this.data;
+                let Dote_Name = this.data.Name_of_dote
+                let Group_to_activate = this.data.Group_to_activate
+                let TheRotation = this.data.The_rotation
+                let The_Arrow = this.el
+                this.el.setAttribute('color', '#fff')
+                this.el.setAttribute('opacity', '0.6')
+                this.el.setAttribute('event-set__mouseenter', "scale: 1.2 1.2 1")
+                this.el.setAttribute('event-set__mouseleave', "scale: 0.9 0.9 0.9")
+                this.el.addEventListener('click', (theDote) => {
+
+                    the_sky.setAttribute('rotation', `0 ${TheRotation} 0`)
+
+                    switch (Dote_Name) {
+                        case 'Dote-1':
+                            the_sky.setAttribute('src', '#Scene-1')
+                            break;
+                        case 'Dote-2':
+                            the_sky.setAttribute('src', '#Scene-2')
+                            break;
+                        case 'Dote-3':
+                            the_sky.setAttribute('src', '#Scene-3')
+                            break;
+                        case 'Dote-4':
+                            the_sky.setAttribute('src', '#Scene-4')
+                            break;
+                        default:
+                            break;
+                    }
+                    let the_group_to_activate = document.querySelector(`#${Group_to_activate}`)
+
+                    groups.forEach(group => {
+                        group.setAttribute('visible', 'false')
+                        group.setAttribute('scale', '0 0 0')
+                    });
+                    the_group_to_activate.setAttribute('visible', 'true')
+                    the_group_to_activate.setAttribute('scale', '1 1 1')
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
