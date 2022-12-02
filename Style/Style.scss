@@ -46,11 +46,103 @@ html {
 
 }
 
-.the_description {
+.the_info {
     position: absolute;
+    @include cent();
+    background-color: #f1f1f1;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
     bottom: 2%;
     left: 2%;
     z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    border: .5em solid #f1f1f1;
+    // font-size: 1em;
+
+    ion-icon {
+        width: 100%;
+        height: 100%;
+        grid-column: 1;
+        grid-row: 1;
+        transition-duration: .1s;
+    }
+
+    ion-icon:nth-child(2) {
+        opacity: 0;
+    }
+
+
+    &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+}
+
+.the_info_active {
+
+    ion-icon {
+        opacity: 0;
+    }
+
+    ion-icon:nth-child(2) {
+        opacity: 1;
+    }
+}
+
+
+.the_gallery {
+    border: .5em solid #f1f1f1;
+    position: absolute;
+    @include cent();
+    background-color: #f1f1f1;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    top: 2%;
+    left: 2%;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    ion-icon {
+        width: 100%;
+        height: 100%;
+        grid-column: 1;
+        grid-row: 1;
+        transition-duration: .1s;
+    }
+
+    ion-icon:nth-child(2) {
+        opacity: 0;
+    }
+
+}
+
+.the_gallery_active {
+    ion-icon {
+        opacity: 0;
+    }
+
+    ion-icon:nth-child(2) {
+        opacity: 1;
+    }
+}
+
+
+.the_description {
+    position: absolute;
+    bottom: -200%;
+    left: 2%;
+    z-index: 16;
     width: 20em;
     height: auto;
     background-color: rgba(#f1f1f1, .7);
@@ -59,7 +151,160 @@ html {
     @include cent();
     font-family: 'Roboto', sans-serif;
     border-radius: .5em;
+    transition-duration: .1s;
+}
+
+.the_gallery_container {
+    position: absolute;
+    top: 10vh;
+    left: -50vw;
+    z-index: 10;
+    width: 8em;
+    height: 80vh;
+    background-color: rgba(#f1f1f1, .9);
+    border-radius: .5em;
+    @include cent();
+    flex-wrap: wrap;
+    cursor: pointer;
+    transition-duration: 1s;
 
 
+    // background-color: salmon;
+    .oneImage {
+        width: 6em;
+        height: 6em;
+        background-image: url('./Images/gallery/Image-1.jpg');
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        border-radius: .5em;
 
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .oneImage:nth-child(2) {
+        background-image: url('./Images/gallery/Image-2.jpg');
+    }
+
+    .oneImage:nth-child(3) {
+        background-image: url('./Images/gallery/Image-3.jpg');
+    }
+
+    .oneImage:nth-child(4) {
+        background-image: url('./Images/gallery/Image-4.jpg');
+    }
+
+    .oneImage:nth-child(5) {
+        background-image: url('./Images/gallery/Image-5.jpg');
+    }
+
+    .oneImage:nth-child(6) {
+        background-image: url('./Images/gallery/Image-6.jpg');
+    }
+}
+
+.The_Image {
+    position: absolute;
+    width: 58vh;
+    height: auto;
+    top: -50%;
+    left: 50%;
+    border: 1em solid #f1f1f1;
+    background-color: #f1f1f1;
+    z-index: 10;
+    border-radius: .5em;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition-duration: 1s;
+
+    img {
+
+        transform: translate(0%, .3%);
+    }
+
+}
+
+.The_Image_Back_Cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-color: rgba(#222, .7);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+
+}
+
+
+.logo {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    width: 5em;
+    height: 5em;
+    z-index: 10;
+    // background-color: sandybrown;
+    background-image: url('./Images/PNG/Logo.svg');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.link_to_archviz {
+
+    position: absolute;
+    @include cent();
+    border-radius: .2em;
+    bottom: calc(2% + .3em);
+    left: calc(2% + 7em);
+    z-index: 10;
+    padding: .3em;
+    border: .1em solid #f1f1f1;
+    color: #f1f1f1;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    // text-shadow: 0 1px 3px rgb(0 0 0 / 2%), 0 1px 2px rgb(0 0 0 / 24%);
+    // box-shadow: 0 1px 3px rgb(0 0 0 / 2%), 0 1px 2px rgb(0 0 0 / 24%);
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+@media all and (max-width: 1000px) {
+    .The_Image {
+        width: 65vw;
+        left: 30vw;
+        // top: 15vh;
+        transform: translate(0%, -55%);
+        border: .3em solid #f1f1f1;
+
+        img {
+
+            transform: translate(0%, .5%);
+        }
+    }
+
+    .the_gallery_container {
+        //     position: absolute;
+        //     top: 10vh;
+        //     left: -50vw;
+        //     z-index: 10;
+        //     width: 8em;
+        //     height: 80vh;
+        //     background-color: rgba(#f1f1f1, .9);
+        //     border-radius: .5em;
+        //     @include cent();
+        //     flex-wrap: wrap;
+        //     cursor: pointer;
+        //     transition-duration: 1s;
+        transform: translate(-.6em, 0%) scale(.9);
+        // transform:;
+    }
 }

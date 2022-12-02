@@ -40,11 +40,123 @@ html {
   background: rgba(55, 55, 60, 0);
 }
 
-.the_description {
+.the_info {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f1f1f1;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
   bottom: 2%;
   left: 2%;
   z-index: 10;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  border: .5em solid #f1f1f1;
+}
+
+.the_info ion-icon {
+  width: 100%;
+  height: 100%;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -webkit-transition-duration: .1s;
+          transition-duration: .1s;
+}
+
+.the_info ion-icon:nth-child(2) {
+  opacity: 0;
+}
+
+.the_info:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
+.the_info_active ion-icon {
+  opacity: 0;
+}
+
+.the_info_active ion-icon:nth-child(2) {
+  opacity: 1;
+}
+
+.the_gallery {
+  border: .5em solid #f1f1f1;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f1f1f1;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  top: 2%;
+  left: 2%;
+  z-index: 10;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  cursor: pointer;
+}
+
+.the_gallery:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.the_gallery ion-icon {
+  width: 100%;
+  height: 100%;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -webkit-transition-duration: .1s;
+          transition-duration: .1s;
+}
+
+.the_gallery ion-icon:nth-child(2) {
+  opacity: 0;
+}
+
+.the_gallery_active ion-icon {
+  opacity: 0;
+}
+
+.the_gallery_active ion-icon:nth-child(2) {
+  opacity: 1;
+}
+
+.the_description {
+  position: absolute;
+  bottom: -200%;
+  left: 2%;
+  z-index: 16;
   width: 20em;
   height: auto;
   background-color: rgba(241, 241, 241, 0.7);
@@ -61,5 +173,163 @@ html {
           align-items: center;
   font-family: 'Roboto', sans-serif;
   border-radius: .5em;
+  -webkit-transition-duration: .1s;
+          transition-duration: .1s;
+}
+
+.the_gallery_container {
+  position: absolute;
+  top: 10vh;
+  left: -50vw;
+  z-index: 10;
+  width: 8em;
+  height: 80vh;
+  background-color: rgba(241, 241, 241, 0.9);
+  border-radius: .5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  cursor: pointer;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.the_gallery_container .oneImage {
+  width: 6em;
+  height: 6em;
+  background-image: url("./Images/gallery/Image-1.jpg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: .5em;
+}
+
+.the_gallery_container .oneImage:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.the_gallery_container .oneImage:nth-child(2) {
+  background-image: url("./Images/gallery/Image-2.jpg");
+}
+
+.the_gallery_container .oneImage:nth-child(3) {
+  background-image: url("./Images/gallery/Image-3.jpg");
+}
+
+.the_gallery_container .oneImage:nth-child(4) {
+  background-image: url("./Images/gallery/Image-4.jpg");
+}
+
+.the_gallery_container .oneImage:nth-child(5) {
+  background-image: url("./Images/gallery/Image-5.jpg");
+}
+
+.the_gallery_container .oneImage:nth-child(6) {
+  background-image: url("./Images/gallery/Image-6.jpg");
+}
+
+.The_Image {
+  position: absolute;
+  width: 58vh;
+  height: auto;
+  top: -50%;
+  left: 50%;
+  border: 1em solid #f1f1f1;
+  background-color: #f1f1f1;
+  z-index: 10;
+  border-radius: .5em;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.The_Image img {
+  -webkit-transform: translate(0%, 0.3%);
+          transform: translate(0%, 0.3%);
+}
+
+.The_Image_Back_Cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background-color: rgba(34, 34, 34, 0.7);
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.logo {
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  width: 5em;
+  height: 5em;
+  z-index: 10;
+  background-image: url("./Images/PNG/Logo.svg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.link_to_archviz {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: .2em;
+  bottom: calc(2% + .3em);
+  left: calc(2% + 7em);
+  z-index: 10;
+  padding: .3em;
+  border: .1em solid #f1f1f1;
+  color: #f1f1f1;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link_to_archviz:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media all and (max-width: 1000px) {
+  .The_Image {
+    width: 65vw;
+    left: 30vw;
+    -webkit-transform: translate(0%, -55%);
+            transform: translate(0%, -55%);
+    border: .3em solid #f1f1f1;
+  }
+  .The_Image img {
+    -webkit-transform: translate(0%, 0.5%);
+            transform: translate(0%, 0.5%);
+  }
+  .the_gallery_container {
+    -webkit-transform: translate(-0.6em, 0%) scale(0.9);
+            transform: translate(-0.6em, 0%) scale(0.9);
+  }
 }
 /*# sourceMappingURL=Style.css.map */

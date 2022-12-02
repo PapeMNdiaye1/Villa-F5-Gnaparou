@@ -32,6 +32,54 @@
         Nous vous aidons dans l’aménagement de vos espaces. Du design moderne au traditionnelle, minimaliste etc...
     </div>
 
+    <div class="the_gallery_container">
+
+        <div class="oneImage">
+
+        </div>
+        <div class="oneImage">
+
+        </div>
+        <div class="oneImage">
+
+        </div>
+        <div class="oneImage">
+
+        </div>
+        <div class="oneImage">
+
+        </div>
+        <div class="oneImage">
+
+        </div>
+
+
+    </div>
+
+    <div class="The_Image">
+        <img src="./Style/Images/gallery/Image-1.jpg" width="100%" alt="">
+    </div>
+
+    <div class="The_Image_Back_Cover">
+    </div>
+
+
+
+    <a class="link_to_archviz" href="http://arch-viz.herokuapp.com/" target="_blank">
+        Lien Vers Archviz <ion-icon name="arrow-forward-outline"></ion-icon>
+    </a>
+
+
+    <div class="the_info">
+        <ion-icon name="alert-outline"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
+
+    <div class="the_gallery">
+        <ion-icon name="camera-outline"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
+
     <a-scene id="the_scene" the_scene cursor="rayOrigin: mouse">
         <a-assets>
             <img id="Scene-1" src="./Style/Images/Image_1.jpg">
@@ -104,8 +152,61 @@
     </a-scene>
     <script>
         let groups = document.querySelectorAll('.groups')
+        let theInfo = document.querySelector('.the_info')
+        let theDescription = document.querySelector('.the_description')
         let the_sky = document.querySelector('#image-360')
         let the_cursor = document.querySelector('.a-mouse-cursor-hover')
+        let theGallery = document.querySelector('.the_gallery')
+        let theGalleryContainer = document.querySelector('.the_gallery_container')
+        let TheImage = document.querySelector('.The_Image')
+        let TheImageBackCover = document.querySelector('.The_Image_Back_Cover')
+
+        let oneImage = document.querySelectorAll('.oneImage')
+
+
+
+        theGallery.addEventListener('click', () => {
+            if (theGallery.classList.length === 1) {
+                theGallery.classList.add("the_gallery_active")
+                theGalleryContainer.style.left = '2%';
+                TheImage.style.top = '50%';
+                TheImage.style.opacity = '1';
+                TheImageBackCover.style.opacity = '1';
+                TheImageBackCover.style.zIndex = '9';
+            } else {
+                theGallery.classList.remove("the_gallery_active")
+                theGalleryContainer.style.left = '';
+                TheImage.style.top = '';
+                TheImage.style.opacity = '';
+                TheImageBackCover.style.opacity = '';
+                setTimeout(function () {
+                    TheImageBackCover.style.zIndex = '0';
+                }, 1000);
+            }
+        })
+
+
+        theInfo.addEventListener('click', () => {
+            if (theInfo.classList.length === 1) {
+                theInfo.classList.add("the_info_active")
+                theDescription.style.bottom = '8%';
+            } else {
+                theDescription.style.bottom = '';
+                theInfo.classList.remove("the_info_active")
+            }
+        })
+
+
+        oneImage.forEach((image, index) => {
+            image.addEventListener('click', () => {
+                TheImage.childNodes[1].setAttribute("src", `./Style/Images/gallery/Image-${index + 1}.jpg`)
+                // console.log(
+                // );
+                // console.log(image.style.getPropertyValue, index);
+            })
+        });
+
+
 
         AFRAME.registerComponent('the_dote', {
             schema: { Name_of_dote: { type: 'string', default: '#Name', }, Group_to_activate: { type: 'string', default: '#Position', }, The_rotation: { type: 'string', default: '0', } },
@@ -152,6 +253,9 @@
             }
         });
     </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>
