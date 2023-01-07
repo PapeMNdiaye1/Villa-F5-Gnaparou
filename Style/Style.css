@@ -11,7 +11,12 @@ html {
 }
 
 .a-loader-title {
-  background-color: black;
+  display: none;
+}
+
+.a-loader-title {
+  width: 0em;
+  opacity: 0;
 }
 
 .a-enter-vr {
@@ -122,6 +127,7 @@ html {
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   cursor: pointer;
+  display: none;
 }
 
 .the_gallery:hover {
