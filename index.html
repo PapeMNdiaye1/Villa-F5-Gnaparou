@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" href="./Style/Images/PNG/favicon.png" />
-    <meta name="description"
-        content="site web du studio ArchViz, nous somme un studio de visualisation architecturale 3D" />
+    <meta name="description" content="Nous somme un studio de visualisation architecturale 3D" />
     <meta name="Keywords"
         content=" Visualisation architecturale, ArchViz, Architectur, Visualisation 3D, 3D sénégal, Architectur sénégal," />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArchViz-Villa-Toure
+    <title>ArchViz-Villa-2
     </title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -115,7 +114,7 @@
         <a-entity laser-controls="hand: right"
             raycaster="objects: [data-clickable] ; far: 500; lineColor: #23343b; lineOpacity: 0.5"></a-entity>
 
-        <a-sky id="image-360" radius="500" rotation="0 0 0" src="#Scene-0"
+        <a-sky id="image-360" radius="600" rotation="0 0 0" src="#Scene-0" look-controls-invert-y="false"
             animation__fade="property: components.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
             animation__fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete__fade">
         </a-sky>
@@ -139,9 +138,6 @@
                 material="src: #Arrow-1; transparent:true"
                 the_dote="Name_of_dote: Dote-15  ; Group_to_activate: Group-15 ; The_rotation: -90">
             </a-plane>
-
-
-
 
         </a-entity>
 

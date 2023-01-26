@@ -17,11 +17,29 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
-.a-loader-title {
-    display: none;
+.canvas {
+    background-color: red;
 }
 
+.canvas.a-canvas {
+    cursor: none;
+    background-color: red;
+}
+
+.canvas.a-canvas.a-mouse-cursor-hover {
+    cursor: none;
+}
+
+.canvas.a-canvas.a-mouse-cursor-hover:hover {
+    cursor: none;
+}
+
+
+
+
+
 .a-loader-title {
+    display: none;
     width: 0em;
     opacity: 0;
 }
