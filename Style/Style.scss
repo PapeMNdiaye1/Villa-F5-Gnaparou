@@ -311,9 +311,9 @@ html {
     .The_Image {
         width: 93vw;
         left: 2.5vw;
-        top: 10vh;
-        transform: translate(0%, -55%);
+        transform: translate(0%, -75%);
         border: .3em solid #f1f1f1;
+        // top: -20vh;
 
         img {
             transform: translate(0%, .5%);
@@ -322,14 +322,29 @@ html {
 
     .the_gallery_container {
         position: absolute;
-        top: 68vh;
+        top: 60vh;
         left: -250vw;
         transform: translate(-.6em, 0%) scale(.9);
-        width: 98.5vw;
-        justify-content: space-between;
-        align-items: space-between;
-        height: 10em;
+        width: 20em;
+        height: 14em;
         background-color: rgba(#222, .0);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: .5em;
+        grid-row-gap: .5em;
+
+
+        // background-color: salmon;
+
+        .oneImage {
+            margin: auto;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     .link_to_archviz {
