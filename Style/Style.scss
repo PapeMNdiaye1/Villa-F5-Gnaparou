@@ -8,6 +8,7 @@
     margin: 0em;
     padding: 0em;
     -webkit-tap-highlight-color: transparent;
+    outline: none;
 }
 
 
@@ -192,6 +193,7 @@ html {
     flex-wrap: wrap;
     cursor: pointer;
     transition-duration: 1s;
+    outline: none;
 
 
     // background-color: salmon;
@@ -203,6 +205,7 @@ html {
         background-size: 100%;
         background-repeat: no-repeat;
         border-radius: .5em;
+        outline: none;
 
         &:hover {
             transform: scale(1.1);

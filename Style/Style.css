@@ -2,6 +2,7 @@
   margin: 0em;
   padding: 0em;
   -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 body,
@@ -220,6 +221,7 @@ html {
   cursor: pointer;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
+  outline: none;
 }
 
 .the_gallery_container .oneImage {
@@ -230,6 +232,7 @@ html {
   background-size: 100%;
   background-repeat: no-repeat;
   border-radius: .5em;
+  outline: none;
 }
 
 .the_gallery_container .oneImage:hover {
