@@ -503,7 +503,6 @@
 
         oneImage.forEach((image, index) => {
             image.addEventListener('click', (e) => {
-                e.stopPropagation();
                 TheImage.childNodes[1].setAttribute("src", `./Style/Images/gallery/Image-${index + 1}.jpg`)
             })
         });
