@@ -346,8 +346,8 @@ html {
   .The_Image {
     width: 93vw;
     left: 2.5vw;
-    -webkit-transform: translate(0%, -85%);
-            transform: translate(0%, -85%);
+    -webkit-transform: translate(0%, -87%);
+            transform: translate(0%, -87%);
     border: .3em solid #f1f1f1;
   }
   .The_Image img {
@@ -356,7 +356,7 @@ html {
   }
   .the_gallery_container {
     position: absolute;
-    top: 55vh;
+    top: 51vh;
     left: -250vw;
     -webkit-transform: translate(-0.6em, 0%) scale(0.9);
             transform: translate(-0.6em, 0%) scale(0.9);
