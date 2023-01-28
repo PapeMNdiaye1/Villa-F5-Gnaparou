@@ -311,7 +311,7 @@ html {
     .The_Image {
         width: 93vw;
         left: 2.5vw;
-        transform: translate(0%, -75%);
+        transform: translate(0%, -85%);
         border: .3em solid #f1f1f1;
         // top: -20vh;
 
@@ -322,10 +322,10 @@ html {
 
     .the_gallery_container {
         position: absolute;
-        top: 60vh;
+        top: 55vh;
         left: -250vw;
         transform: translate(-.6em, 0%) scale(.9);
-        width: 20em;
+        width: 22em;
         height: 14em;
         background-color: rgba(#222, .0);
         display: grid;
