@@ -131,7 +131,7 @@ html {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     cursor: pointer;
-    display: none;
+    // display: none;
 
     &:hover {
         transform: scale(1.1);
@@ -196,7 +196,7 @@ html {
     // background-color: salmon;
     .oneImage {
         width: 6em;
-        height: 6em;
+        height: 4em;
         background-image: url('./Images/gallery/Image-1.jpg');
         background-position: center;
         background-size: 100%;
@@ -227,15 +227,23 @@ html {
     .oneImage:nth-child(6) {
         background-image: url('./Images/gallery/Image-6.jpg');
     }
+
+    .oneImage:nth-child(7) {
+        background-image: url('./Images/gallery/Image-7.jpg');
+    }
+
+    .oneImage:nth-child(8) {
+        background-image: url('./Images/gallery/Image-8.jpg');
+    }
 }
 
 .The_Image {
     position: absolute;
-    width: 58vh;
+    width: 90vh;
     height: auto;
     top: -50%;
     left: 50%;
-    border: 1em solid #f1f1f1;
+    border: .5em solid #f1f1f1;
     background-color: #f1f1f1;
     z-index: 10;
     border-radius: .5em;
