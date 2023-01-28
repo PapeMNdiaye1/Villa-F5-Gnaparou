@@ -344,8 +344,9 @@ html {
 
 @media all and (max-width: 1000px) {
   .The_Image {
-    width: 65vw;
-    left: 30vw;
+    width: 93vw;
+    left: 2.5vw;
+    top: 10vh;
     -webkit-transform: translate(0%, -55%);
             transform: translate(0%, -55%);
     border: .3em solid #f1f1f1;
@@ -355,8 +356,20 @@ html {
             transform: translate(0%, 0.5%);
   }
   .the_gallery_container {
+    position: absolute;
+    top: 68vh;
+    left: -250vw;
     -webkit-transform: translate(-0.6em, 0%) scale(0.9);
             transform: translate(-0.6em, 0%) scale(0.9);
+    width: 98.5vw;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: space-between;
+        -ms-flex-align: space-between;
+            align-items: space-between;
+    height: 10em;
+    background-color: rgba(34, 34, 34, 0);
   }
   .link_to_archviz {
     height: 1.2em;

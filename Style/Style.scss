@@ -131,7 +131,7 @@ html {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     cursor: pointer;
-    // display: none;
+
 
     &:hover {
         transform: scale(1.1);
@@ -301,8 +301,6 @@ html {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     text-decoration: none;
-    // text-shadow: 0 1px 3px rgb(0 0 0 / 2%), 0 1px 2px rgb(0 0 0 / 24%);
-    // box-shadow: 0 1px 3px rgb(0 0 0 / 2%), 0 1px 2px rgb(0 0 0 / 24%);
 
     &:hover {
         transform: scale(1.1);
@@ -311,26 +309,32 @@ html {
 
 @media all and (max-width: 1000px) {
     .The_Image {
-        width: 65vw;
-        left: 30vw;
-        // top: 15vh;
+        width: 93vw;
+        left: 2.5vw;
+        top: 10vh;
         transform: translate(0%, -55%);
         border: .3em solid #f1f1f1;
 
         img {
-
             transform: translate(0%, .5%);
         }
     }
 
     .the_gallery_container {
+        position: absolute;
+        top: 68vh;
+        left: -250vw;
+        // border: .3em solid #f1f1f1;
         transform: translate(-.6em, 0%) scale(.9);
+        width: 98.5vw;
+        justify-content: space-between;
+        align-items: space-between;
+        height: 10em;
+        background-color: rgba(#222, .0);
     }
 
     .link_to_archviz {
-
         height: 1.2em;
         top: 2%;
-
     }
 }
