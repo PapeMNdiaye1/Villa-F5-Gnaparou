@@ -222,7 +222,6 @@ html {
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
   outline: none;
-  z-index: 2;
 }
 
 .the_gallery_container .oneImage {
@@ -361,11 +360,11 @@ html {
   }
   .the_gallery_container {
     position: absolute;
-    top: 51vh;
+    top: 55vh;
     left: -250vw;
     -webkit-transform: translate(-0.6em, 0%) scale(0.9);
             transform: translate(-0.6em, 0%) scale(0.9);
-    width: 22em;
+    width: 20em;
     height: 14em;
     background-color: rgba(34, 34, 34, 0);
     display: -ms-grid;

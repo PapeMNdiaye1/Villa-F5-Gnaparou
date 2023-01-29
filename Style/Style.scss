@@ -194,7 +194,7 @@ html {
     cursor: pointer;
     transition-duration: 1s;
     outline: none;
-    z-index: 2;
+    // z-index: 2;
 
 
     .oneImage {
@@ -325,10 +325,10 @@ html {
 
     .the_gallery_container {
         position: absolute;
-        top: 51vh;
+        top: 55vh;
         left: -250vw;
         transform: translate(-.6em, 0%) scale(.9);
-        width: 22em;
+        width: 20em;
         height: 14em;
         background-color: rgba(#222, .0);
         display: grid;
