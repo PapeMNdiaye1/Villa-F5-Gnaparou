@@ -222,6 +222,7 @@ html {
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
   outline: none;
+  z-index: 2;
 }
 
 .the_gallery_container .oneImage {

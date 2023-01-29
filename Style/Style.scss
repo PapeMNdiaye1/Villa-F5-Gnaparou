@@ -194,9 +194,9 @@ html {
     cursor: pointer;
     transition-duration: 1s;
     outline: none;
+    z-index: 2;
 
 
-    // background-color: salmon;
     .oneImage {
         width: 6em;
         height: 4em;
@@ -284,7 +284,6 @@ html {
     width: 5em;
     height: 5em;
     z-index: 10;
-    // background-color: sandybrown;
     background-image: url('./Images/PNG/Logo.svg');
     background-position: center;
     background-size: 100%;
