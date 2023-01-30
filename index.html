@@ -66,7 +66,8 @@
     </div>
 
     <a class="link_to_archviz" href="https://archviz.netlify.app/" target="_blank">
-        Archviz Studio <ion-icon name="arrow-forward-outline"></ion-icon>
+        <!-- Archviz Studio <ion-icon name="arrow-forward-outline"></ion-icon> -->
+
     </a>
 
     <div class="the_info">
@@ -82,6 +83,7 @@
     <a-scene id="the_scene" the_scene cursor="rayOrigin: mouse">
         <a-assets>
             <img id="Arrow-1" src="./Style/Images/PNG/Arrow-1.png">
+            <img id="Arrow-2" src="./Style/Images/PNG/Arrow-2.png">
             <img id="Dote-1" src="./Style/Images/PNG/Dote_1.png">
             <img id="Scene-0" src="./Style/Images/Scene-0.jpg">
             <img id="Scene-1" src="./Style/Images/Scene-1.jpg">
@@ -97,9 +99,9 @@
             <img id="Scene-11" src="./Style/Images/Scene-11.jpg">
             <img id="Scene-12" src="./Style/Images/Scene-12.jpg">
             <img id="Scene-13" src="./Style/Images/Scene-13.jpg">
-            <!-- <img id="Scene-15" src="./Style/Images/Scene-15.jpg">
-            <img id="Scene-16" src="./Style/Images/Scene-16.jpg">
-            <img id="Scene-17" src="./Style/Images/Scene-17.jpg">
+            <img id="Scene-14" src="./Style/Images/Scene-14.jpg">
+            <img id="Scene-15" src="./Style/Images/Scene-15.jpg">
+            <!-- <img id="Scene-17" src="./Style/Images/Scene-17.jpg">
             <img id="Scene-18" src="./Style/Images/Scene-18.jpg">
             <img id="Scene-19" src="./Style/Images/Scene-19.jpg"> -->
         </a-assets>
@@ -355,25 +357,44 @@
                 the_dote="Name_of_dote: Dote-12 ; Group_to_activate: Group-12 ; The_rotation: 0">
             </a-plane>
 
+            <a-plane data-clickable class="Dote" material="src: #Arrow-2; transparent:true"
+                position="-2.18963 1.49426 -0.00689" rotation="-56.031834617023726 87.96964803320608 0.6755172404592406"
+                the_dote="Name_of_dote: Dote-14 ; Group_to_activate: Group-14 ; The_rotation: 0">
+            </a-plane>
+
 
         </a-entity>
 
 
+        <!-- Group-14 -->
+        <a-entity scale="0 0 0" class="groups" id="Group-14" visible="false">
+
+            <a-plane data-clickable class="pintings clickable" position="0.74275 -0.02999 1"
+                rotation="-83.35103524665651 -70.40161611890477 -18.795880469266656"
+                material="src: #Arrow-2; transparent:true"
+                the_dote="Name_of_dote: Dote-13  ; Group_to_activate: Group-13 ; The_rotation: 0">
+            </a-plane>
+
+
+            <a-plane data-clickable class="pintings clickable" position="0.69459 -1 -6.71043"
+                rotation="-84.98224608939397 -54.38228912484209 22.685690940409817"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-15  ; Group_to_activate: Group-15 ; The_rotation: 0">
+            </a-plane>
+
+
+
+        </a-entity>
+
         <!-- Group-15 -->
         <a-entity scale="0 0 0" class="groups" id="Group-15" visible="false">
 
-            <a-plane data-clickable class="pintings clickable" position="-0.09412 -0.49754 3.47189"
+            <a-plane data-clickable class="pintings clickable" position="-0.39 -0.49754 6.98511"
                 rotation="-77.03990513329049 -170.9734708560133 -9.042419922754652"
                 material="src: #Arrow-1; transparent:true"
-                the_dote="Name_of_dote: Dote-0  ; Group_to_activate: Group-0 ; The_rotation: 0">
+                the_dote="Name_of_dote: Dote-14  ; Group_to_activate: Group-14 ; The_rotation: 0">
             </a-plane>
 
-
-            <a-plane data-clickable class="pintings clickable" position="0.69459 -1 -4.31258"
-                rotation="-84.98854862514041 54.33129588107544 -86.23587774514021"
-                material="src: #Arrow-1; transparent:true"
-                the_dote="Name_of_dote: Dote-16  ; Group_to_activate: Group-16 ; The_rotation: 0">
-            </a-plane>
 
 
         </a-entity>
@@ -570,6 +591,9 @@
                             break;
                         case 'Dote-13':
                             the_sky.setAttribute('src', '#Scene-13')
+                            break;
+                        case 'Dote-14':
+                            the_sky.setAttribute('src', '#Scene-14')
                             break;
                         case 'Dote-15':
                             the_sky.setAttribute('src', '#Scene-15')
