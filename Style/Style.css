@@ -342,8 +342,6 @@ html {
   text-decoration: none;
   background-image: url("./Images/PNG/AV.svg");
   background-repeat: no-repeat;
-  -webkit-filter: invert(100);
-          filter: invert(100);
   background-size: 100%;
 }
 
