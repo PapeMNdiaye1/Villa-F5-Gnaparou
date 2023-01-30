@@ -103,6 +103,7 @@
             <img id="Scene-17" src="./Style/Images/Scene-17.jpg">
             <img id="Scene-18" src="./Style/Images/Scene-18.jpg">
             <img id="Scene-19" src="./Style/Images/Scene-19.jpg">
+            <img id="Scene-20" src="./Style/Images/Scene-20.jpg">
         </a-assets>
 
         <a-entity laser-controls="hand: left"
@@ -298,7 +299,7 @@
             </a-plane>
 
             <a-plane data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                position="4.60344 -1 1.84528" rotation="-84.57716492823647 -45.05453622011228 -9.184513455947096"
+                position="4.60344 -1.33865 0.40575" rotation="-79.63082028287208 -21.815941007401225 -32.61791431900264"
                 the_dote="Name_of_dote: Dote-12 ; Group_to_activate: Group-12 ; The_rotation: 0">
             </a-plane>
 
@@ -392,6 +393,11 @@
                 the_dote="Name_of_dote: Dote-19  ; Group_to_activate: Group-19 ; The_rotation: 0">
             </a-plane>
 
+            <a-plane data-clickable class="pintings clickable" position="1.58422 -1 4.01617"
+                rotation="-80.16080624336809 170.19023755006947 159.05881350626782"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-20  ; Group_to_activate: Group-20 ; The_rotation: 0">
+            </a-plane>
 
 
         </a-entity>
@@ -482,6 +488,16 @@
                 the_dote="Name_of_dote: Dote-14  ; Group_to_activate: Group-14 ; The_rotation: 0">
             </a-plane>
 
+        </a-entity>
+
+        <!-- Group-20 -->
+        <a-entity scale="0 0 0" class="groups" id="Group-20" visible="false">
+
+            <a-plane data-clickable class="pintings clickable" position="-3.7587 -0.49754 -0.49261"
+                rotation="-85.6835464306341 77.0754285165886 -171.95723939025294"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-14  ; Group_to_activate: Group-14 ; The_rotation: 0">
+            </a-plane>
 
 
         </a-entity>
@@ -622,6 +638,9 @@
                             break;
                         case 'Dote-19':
                             the_sky.setAttribute('src', '#Scene-19')
+                            break;
+                        case 'Dote-20':
+                            the_sky.setAttribute('src', '#Scene-20')
                             break;
                         default:
                             break;
