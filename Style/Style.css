@@ -402,6 +402,7 @@ html {
             transform: translate(-50%, -5%);
     -webkit-filter: invert(0);
             filter: invert(0);
+    display: none;
   }
 }
 /*# sourceMappingURL=Style.css.map */
