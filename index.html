@@ -101,6 +101,7 @@
             <img id="Scene-18" src="./Style/Images/Scene-18.jpg">
             <img id="Scene-19" src="./Style/Images/Scene-19.jpg">
             <img id="Scene-20" src="./Style/Images/Scene-20.jpg">
+            <img id="Scene-21" src="./Style/Images/Scene-21.jpg">
         </a-assets>
 
         <a-entity laser-controls="hand: left"
@@ -468,6 +469,13 @@
                 the_dote="Name_of_dote: Dote-17  ; Group_to_activate: Group-17 ; The_rotation: 0">
             </a-plane>
 
+            <a-plane data-clickable class="pintings clickable" position="2.39006 -1 1.38413"
+                rotation="-88.97117825909476 62.088571469351656 103.3449704655417"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-21  ; Group_to_activate: Group-21 ; The_rotation: 0">
+            </a-plane>
+
+
         </a-entity>
 
         <!-- Group-19 -->
@@ -490,6 +498,17 @@
                 material="src: #Arrow-1; transparent:true"
                 the_dote="Name_of_dote: Dote-14  ; Group_to_activate: Group-14 ; The_rotation: 0">
             </a-plane>
+
+        </a-entity>
+        <!-- Group-20 -->
+        <a-entity scale="0 0 0" class="groups" id="Group-21" visible="false">
+
+            <a-plane data-clickable class="pintings clickable" position="1.37189 -0.49754 -0.9044"
+                rotation="-85.36956555890241 -157.8292460779171 172.4620152077632"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-18  ; Group_to_activate: Group-18 ; The_rotation: 0">
+            </a-plane>
+
 
         </a-entity>
 
@@ -632,6 +651,9 @@
                             break;
                         case 'Dote-20':
                             the_sky.setAttribute('src', '#Scene-20')
+                            break;
+                        case 'Dote-21':
+                            the_sky.setAttribute('src', '#Scene-21')
                             break;
                         default:
                             break;
