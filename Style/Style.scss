@@ -290,31 +290,31 @@ html {
     background-repeat: no-repeat;
 }
 
-.link_to_archviz {
-    width: 1.5em;
-    height: 1.5em;
+// .link_to_archviz {
+//     width: 1.5em;
+//     height: 1.5em;
 
-    position: absolute;
-    @include cent();
-    border-radius: .2em;
-    bottom: calc(2% + 0em);
-    right: calc(2% + 4em);
-    z-index: 10;
-    padding: .3em;
-    // border: .1em solid #f1f1f1;
-    color: #f1f1f1;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    text-decoration: none;
-    background-image: url('./Images/PNG/AV.svg');
-    background-repeat: no-repeat;
-    // filter: invert(100);
-    background-size: 100%;
+//     position: absolute;
+//     @include cent();
+//     border-radius: .2em;
+//     bottom: calc(2% + 0em);
+//     right: calc(2% + 4em);
+//     z-index: 10;
+//     padding: .3em;
+//     // border: .1em solid #f1f1f1;
+//     color: #f1f1f1;
+//     font-family: 'Roboto', sans-serif;
+//     font-weight: 500;
+//     text-decoration: none;
+//     background-image: url('./Images/PNG/AV.svg');
+//     background-repeat: no-repeat;
+//     // filter: invert(100);
+//     background-size: 100%;
 
-    &:hover {
-        transform: scale(1.1);
-    }
-}
+//     &:hover {
+//         transform: scale(1.1);
+//     }
+// }
 
 @media all and (max-width: 1000px) {
     .The_Image {
@@ -356,12 +356,12 @@ html {
         }
     }
 
-    .link_to_archviz {
-        // height: 1.2em;
-        // top: 2%;
-        left: 50%;
-        transform: translate(-50%, -5%);
-        filter: invert(0);
-        display: none;
-    }
+    // .link_to_archviz {
+    //     // height: 1.2em;
+    //     // top: 2%;
+    //     left: 50%;
+    //     transform: translate(-50%, -5%);
+    //     filter: invert(0);
+    //     display: none;
+    // }
 }
